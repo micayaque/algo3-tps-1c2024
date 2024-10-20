@@ -1,0 +1,74 @@
+Es el año 95 ACM (Después del Crash de Microsoft).
+Después de muchos años de paz, ha estallado una guerra.
+Tu nación, la isla de las macros siempre verdes y los atajos confusos (EMACS), se defiende del imperio ferroviario 
+gobernado por maquinistas con discapacidad visual (VIM).
+
+En los días previos al estallido de la guerra, su gobierno dedicó una gran cantidad de recursos a recopilar inteligencia sobre VIM.
+Descubrió lo siguiente:
+•   El imperio cuenta con una gran red de estaciones de ferrocarril conectadas por vías bidireccionales.
+•   Antes del estallido de la guerra, cada estación de ferrocarril estaba conectada directamente con como máximo otras 10 estaciones.
+•   En VIM se intercambia información constantemente, pero, debido a un fallo de diseño, la única forma de intercambiarla es 
+    enviando los mensajes por tren. 
+    Antes del estallido de la guerra, era posible enviar un mensaje en tren desde cualquier estación a cualquier otra.
+•   Como último recurso, el mando central del imperio puede enviar mensajes mediante palomas mensajeras, pero intenta evitarlo 
+    a toda costa, ya que las únicas palomas adecuadas para esta tarea deben importarse, 
+    con un gran coste, desde la lejana tierra de Palomas con trajes de mensajería (PICO).
+•   Una vez que una paloma ha entregado un mensaje a una estación de ferrocarril, debe descansar y, por lo tanto, 
+    no puede volver a utilizarse. 
+    Si una paloma ha entregado un mensaje de transmisión a una estación en particular, el mensaje se transmite.
+    Si es posible, en tren.
+
+Basándose en esta información, el gobierno de EMACS ha elaborado un plan para interrumpir las actividades del imperio del mal.
+Enviarán aviones bombarderos para bombardear las estaciones de ferrocarril, obstaculizando así las comunicaciones en el imperio.
+Esto requerirá que el imperio adquiera muchas palomas mensajeras, distrayéndolo de sus mortíferas actividades durante la guerra.
+Lamentablemente, su gobierno gastó tanto dinero en reunir información de inteligencia que le queda una cantidad muy limitada para 
+fabricar bombas.
+Como resultado, sólo puede bombardear un objetivo.
+Se te ha encomendado la tarea de determinar las mejores estaciones de ferrocarril candidatas a bombardear en el imperio, 
+en función de su "valor de paloma".
+El "valor de paloma" de una estación es el número mínimo de palomas que, después de bombardear esta estación, 
+serán necesarias para transmitir un mensaje desde el comando central del imperio a todas las estaciones no bombardeadas.
+Se desconoce la ubicación del comando central del imperio pero sabemos que no se encuentra en una estación de tren.
+Esto implica que cuando el comando central necesita enviar un mensaje a alguna estación no bombardeada, 
+tiene que usar al menos una paloma y luego el mensaje puede ser transmitido por ferrocarril.
+
+Input
+El archivo de entrada contiene varios casos de prueba.
+Los datos para cada caso comienzan con una línea que contiene los dos números enteros siguientes:
+•   n el número de estaciones de ferrocarril en el imperio (3 ≤ n ≤ 10000). 
+    Las estaciones se numerarán comenzando desde 0, hasta n − 1
+•   m el número de estaciones que se identificarán como objetivos de bombardeo candidatos (1 ≤ m ≤ n).
+
+Las siguientes líneas constan de pares de números enteros.
+Cada par (x, y) indica la presencia de una línea ferroviaria bidireccional que conecta las estaciones de ferrocarril x e y.
+Esta secuencia termina con una línea que contiene dos menos 1, como se muestra en la entrada de muestra.
+La entrada finaliza en un caso en el que el valor de n = m = 0.
+Este caso no debe ser procesado.
+
+Output
+Para cada caso de entrada, la salida debería dar las estaciones de ferrocarril más deseables para bombardear.
+Debe haber exactamente m líneas, cada una con dos números enteros separados por un solo espacio.
+El primer número entero de cada línea será el número de una estación de tren 
+y el segundo será el "valor de paloma" de la estación.
+Esta lista debe ordenarse, primero por “valor de paloma”, en orden descendente, 
+y dentro del mismo “valor de paloma” por números de estaciones de ferrocarril, en orden ascendente.
+Imprima una línea en blanco después de la salida para cada conjunto de entradas.
+
+Entrada de muestra
+8 4
+0 4
+1 2
+2 3
+2 4
+3 5
+3 6
+3 7
+6 7
+-1 -1
+0 0
+
+Salida de muestra
+2 3
+3 3
+4 2
+0 1
