@@ -1,0 +1,32 @@
+El señor Black compró recientemente una villa en el campo.
+Sólo una cosa le molesta: aunque en la mayoría de las habitaciones hay interruptores de luz, las luces que controlan a menudo se encuentran en otras habitaciones además de los propios interruptores.
+Si bien su agente inmobiliario vio esto como una característica, el Sr. Black llegó a creer que los electricistas estaban un poco distraídos (por decirlo suavemente) cuando conectaron los interruptores a los enchufes.
+Una noche, el señor Black llegó tarde a casa.
+Mientras estaba en el pasillo, notó que las luces de todas las demás habitaciones estaban apagadas.
+Desafortunadamente, el Sr. Black tenía miedo a la oscuridad, por lo que nunca se atrevió a entrar en una habitación que tuviera las luces apagadas y nunca apagaría las luces de la habitación en la que se encontraba.
+Después de pensarlo un poco, el Sr. Black pudo utilizar los interruptores de luz mal cableados a su favor.
+Logró llegar a su dormitorio y apagar todas las luces excepto la del dormitorio.
+Debes escribir un programa que, dada la descripción de una villa, determine cómo llegar desde el pasillo al dormitorio si inicialmente solo está encendida la luz del pasillo.
+Nunca se puede entrar en una habitación oscura y, después del último movimiento, se deben apagar todas las luces excepto la del dormitorio.
+Si hay varios caminos hacia el dormitorio, hay que buscar el que utilice el menor número de escalones, donde “pasar de una habitación a otra”, “encender una luz” y “apagar una luz” cuentan cada uno como uno. paso.
+
+
+Aporte
+El archivo de entrada contiene varias descripciones de villas.
+Cada villa comienza con una línea que contiene tres números enteros r, d y s.
+r es el número de habitaciones de la villa, que como máximo serán 10.
+d es el número de puertas/conexiones entre las habitaciones y s es el número de interruptores de luz en la villa.
+Las habitaciones están numeradas del 1 al r;
+La habitación número 1 es el pasillo, la habitación número r es el dormitorio.
+Esta línea va seguida de d líneas que contienen dos números enteros i y j cada una, especificando que la habitación i está conectada a la habitación j por una puerta.
+Luego siga s líneas que contienen dos números enteros k y l cada una, lo que indica que hay un interruptor de luz en la habitación k que controla la luz en la habitación l.
+Una línea en blanco separa la descripción de la villa de la siguiente.
+El archivo de entrada termina con una villa que tiene r = d = s = 0, que no debe procesarse.
+
+Producción
+Para cada villa, primero genere el número del caso de prueba ('Villa #1', 'Villa #2', etc.) en una línea propia.
+Si hay una solución al problema del Sr. Black, genere la secuencia de pasos más corta posible que lo lleve a su dormitorio y solo deje encendida la luz del dormitorio.
+(Envíe solo una secuencia más corta si encuentra más de una).
+Siga el formato de salida que se muestra en el siguiente ejemplo.
+Si no hay solución, genere una línea que contenga la declaración "El problema no se puede resolver".
+Genere una línea en blanco después de cada caso de prueba.
